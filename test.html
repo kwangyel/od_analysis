@@ -142,6 +142,10 @@
         
 
         var oneToManyFlowmapLayer = L.canvasFlowmapLayer(geoJsonFeatureCollection, {
+	  pointToLayer: function(point, latlng) {
+            var marker = L.circleMarker(latlng);
+            return marker.bindPopup('' + point.properties.dest_school);
+          },
           originAndDestinationFieldIds: {
             originUniqueIdField: 'origin_id',
             originGeometry: {
