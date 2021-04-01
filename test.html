@@ -116,10 +116,7 @@
 
     // var zones = L.geojson(neighbourhoodZones).addTo(map)
 
-  
-
-    function hh(){
-        // L.esri.featureLayer(neighbourhoodZones).addTo(map)
+    // L.esri.featureLayer(neighbourhoodZones).addTo(map)
     // Papa.parse('https://raw.githubusercontent.com/jwasilgeo/Leaflet.Canvas-Flowmap-Layer/master/docs/csv-data/Flowmap_Cities_many_to_one.csv', {
     Papa.parse('https://raw.githubusercontent.com/kwangyel/zhicharthimphuFrontend/master/od.csv', {
     // Papa.parse('/docs/csv-data/Flowmap_Cities_many_to_one.csv', {
@@ -182,7 +179,7 @@
         oneToManyFlowmapLayer.selectFeaturesForPathDisplayById('s_city_id', 562, true, 'SELECTION_NEW');
       }
     });
-    }
+    
 
 
     fetch(neighbourhoodZones)
@@ -201,10 +198,7 @@
           fillOpacity: 0.2
         }
         ).addTo(map);
-        hh()
         });
-
-
     
    
 
