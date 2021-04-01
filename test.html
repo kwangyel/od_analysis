@@ -154,6 +154,93 @@
               y: 'school_lat'
             }
           },
+		          canvasBezierStyle: {
+            type: 'classBreaks',
+            field: 'count',
+            classBreakInfos: [{
+              classMinValue: 0,
+              classMaxValue: 50,
+              symbol: {
+                strokeStyle: '#dd1c77',
+                lineWidth: 0.5,
+                lineCap: 'round',
+                shadowColor: '#dd1c77',
+                shadowBlur: 1.5
+              }
+            }, {
+              classMinValue: 50,
+              classMaxValue: 100,
+              symbol: {
+                strokeStyle: '#dd1c77',
+                lineWidth: 1.5,
+                lineCap: 'round',
+                shadowColor: '#dd1c77',
+                shadowBlur: 1.5
+              }
+            }, {
+              classMinValue: 100,
+              classMaxValue: 200,
+              symbol: {
+                strokeStyle: '#dd1c77',
+                lineWidth: 3,
+                lineCap: 'round',
+                shadowColor: '#dd1c77',
+                shadowBlur: 1.5
+              }
+            },{
+              classMinValue: 200,
+              classMaxValue: 300,
+              symbol: {
+                strokeStyle: '#dd1c77',
+                lineWidth: 5,
+                lineCap: 'round',
+                shadowColor: '#dd1c77',
+                shadowBlur: 1.5
+              }
+            },{
+              classMinValue: 300,
+              classMaxValue: 400,
+              symbol: {
+                strokeStyle: '#dd1c77',
+                lineWidth: 7,
+                lineCap: 'round',
+                shadowColor: '#dd1c77',
+                shadowBlur: 1.5
+              }
+            },{
+              classMinValue: 400,
+              classMaxValue: 500,
+              symbol: {
+                strokeStyle: '#dd1c77',
+                lineWidth: 9,
+                lineCap: 'round',
+                shadowColor: '#dd1c77',
+                shadowBlur: 1.5
+              }
+            },{
+              classMinValue: 500,
+              classMaxValue: 1000,
+              symbol: {
+                strokeStyle: '#dd1c77',
+                lineWidth: 12,
+                lineCap: 'round',
+                shadowColor: '#dd1c77',
+                shadowBlur: 1.5
+              }
+            },
+
+
+          ],
+            // the layer will use the defaultSymbol if a data value doesn't fit
+            // in any of the defined classBreaks
+            defaultSymbol: {
+              strokeStyle: '#e7e1ef',
+              lineWidth: 0.5,
+              lineCap: 'round',
+              shadowColor: '#e7e1ef',
+              shadowBlur: 1.5
+            },
+          },
           pathDisplayMode: 'selection',
           animationStarted: true,
           animationEasingFamily: 'Cubic',
@@ -176,7 +263,9 @@
 
         // immediately select an origin point for Bezier path display,
         // instead of waiting for the first user click event to fire
-        oneToManyFlowmapLayer.selectFeaturesForPathDisplayById('s_city_id', 562, true, 'SELECTION_NEW');
+      oneToManyFlowmapLayer.selectFeaturesForPathDisplayById('origin_id', 12, true, 'SELECTION_NEW');
+        oneToManyFlowmapLayer.selectFeaturesForPathDisplayById('origin_id', 13, true, 'SELECTION_ADD');
+        oneToManyFlowmapLayer.selectFeaturesForPathDisplayById('origin_id', 14, true, 'SELECTION_ADD');
       }
     });
     
@@ -197,7 +286,7 @@
           dashArray: '3',
           fillOpacity: 0.2
         }
-        ).addTo(map);
+        );
         });
     
    
